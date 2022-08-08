@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>{% block title %} Home {% endblock title %} - FinWiz</title>
+    {% load static %}
+    {% block head_meta %}
+    <meta content="" name="description">
+
+    <meta content="" name="keywords">
+    {% endblock head_meta %}
+
+    {% block head_favicon %}
+    <!-- Favicons -->
+    <link href="{% static 'website/img/favicon.png' %}" rel="icon">
+    <link href="{% static 'website/img/favicon.png' %}" rel="apple-touch-icon">
+    {% endblock head_favicon %}
+
+    {% block javascript %}
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+    {% endblock javascript %}
+
+    {% block fonts %}
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+    {% endblock fonts %}
+
+
+    {% block vendor_css %}
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'website/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'website/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'website/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'website/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'website/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+    <link href="{% static 'website/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+    {% endblock vendor_css %}
+
+    <!-- Template Main CSS File -->
+    {% block main_css %}
+    <link href="{% static 'website/css/style.css' %}" rel="stylesheet">
+    {% endblock main_css %}
+</head>
+
+<body>
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top ">
+    <div class="container-fluid">
+
+        <div class="row justify-content-center">
+            <div class="col-xl-9 d-flex align-items-center justify-content-lg-between">
+                <h1 class="logo me-auto me-lg-0"><a href="{% url 'index' %}">FinWiz</a></h1>
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <!-- <a href="{% url 'index' %}" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+                <nav id="navbar" class="navbar order-last order-lg-0">
+                    <ul>
+                        <li><a class="nav-link scrollto active" href="{% url 'index' %}#hero">Home</a></li>
+                        <li><a class="nav-link scrollto" href="{% url 'index' %}#about">About</a></li>
+                        <li><a class="nav-link scrollto" href="{% url 'index' %}#services">Services</a></li>
+                        <li><a class="nav-link scrollto " href="{% url 'index' %}#portfolio">Portfolio</a></li>
+                        <li><a class="nav-link scrollto" href="{% url 'index' %}#about">Blog</a></li>
+                        <li><a class="nav-link scrollto" href="{% url 'index' %}#contact">Contact</a></li>
+                    </ul>
+                    <i class="bi bi-list mobile-nav-toggle"></i>
+                </nav><!-- .navbar -->
+
+                <a href="{% url 'index' %}#contact" class="get-started-btn scrollto">Get Started</a>
+            </div>
+        </div>
+
+    </div>
+</header><!-- End Header -->
+
+<div id="site-wrapper">
+    {% block content %}
+    if you see this, something is wrong!
+    {% endblock content %}
+</div>
+
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+    <div class="container">
+        <h3>FinWiz</h3>
+        <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi
+            placeat.</p>
+        <div class="social-links">
+            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+        <div class="copyright">
+            Copyright &copy; 2022 All Rights Reserved <strong><span>FinWiz</span></strong>.
+        </div>
+    </div>
+</footer><!-- End Footer -->
+
+<div id="preloader"></div>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+
+{% block footer_js %}
+<!-- Vendor JS Files -->
+{% block footer_vendor_js %}
+<script src="{% static 'website/vendor/purecounter/purecounter.js' %}"></script>
+<script src="{% static 'website/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'website/vendor/glightbox/js/glightbox.min.js' %}"></script>
+<script src="{% static 'website/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'website/vendor/swiper/swiper-bundle.min.js' %}"></script>
+{% endblock footer_vendor_js %}
+
+<!-- Template Main JS File -->
+
+{% block footer_site_js %}
+<script src="{% static 'website/js/main.js' %}"></script>
+{% endblock footer_site_js %}
+
+{% block page_js %}
+{% endblock page_js %}
+
+{% endblock footer_js %}
+
+</body>
+
+</html>

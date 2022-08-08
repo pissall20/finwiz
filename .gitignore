@@ -136,7 +136,5 @@ dmypy.json
 
 # Personal
 staticfiles
-aiprizm.json
-blog.json
-bash_helpers
 .DS_Store
+website/migrations

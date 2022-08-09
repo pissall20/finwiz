@@ -40,7 +40,24 @@ class Portfolio(models.Model):
     photo = models.ImageField(upload_to="client_logos/", blank=True, null=True)
     video_link = models.CharField(max_length=200)
     client_type = models.CharField(max_length=20, choices=CLIENT_TYPE)
+    order = models.IntegerField(null=True)
 
     def __str__(self):
         return self.name
 
+
+class Team(models.Model):
+    name = models.CharField(max_length=100)
+    designation = models.CharField(max_length=100)
+    short_desc = models.TextField(max_length=500)
+    photo = models.ImageField(upload_to="team_pictures/", null=True)
+    order = models.IntegerField(null=True)
+
+    # social media
+    twitter = models.CharField(max_length=200, default="#")
+    facebook = models.CharField(max_length=200, default="#")
+    instagram = models.CharField(max_length=200, default="#")
+    linkedin = models.CharField(max_length=200, default="#")
+
+    def __str__(self):
+        return self.name

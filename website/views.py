@@ -14,6 +14,10 @@ def index(request):
     return render(request, 'website/index.html', context)
 
 
+def inner_page(request):
+    return render(request, 'website/inner-page.html', {})
+
+
 def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)

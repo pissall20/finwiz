@@ -31,6 +31,7 @@ def contact(request):
                 'message': form.cleaned_data['message'],
             }
             message = "\n".join(body.values())
+            form.save()
 
             try:
                 send_mail(subject, message, 'admin@example.com', ['admin@example.com'])

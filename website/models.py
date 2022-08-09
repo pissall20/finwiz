@@ -35,7 +35,7 @@ CLIENT_TYPE = (
 )
 
 
-class PortFolio(models.Model):
+class Portfolio(models.Model):
     name = models.CharField(max_length=100)
     photo = models.ImageField(upload_to="client_logos/", blank=True, null=True)
     video_link = models.CharField(max_length=200)

@@ -4,5 +4,5 @@ from .models import *
 
 admin.register(Contact)
 admin.register(Client)
-admin.register(PortFolio)
+admin.register(Portfolio)
 admin.register(FAQ)

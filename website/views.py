@@ -1,6 +1,6 @@
-from django.shortcuts import render
 from django.core.mail import send_mail, BadHeaderError
-from django.http import HttpResponse, JsonResponse
+from django.http import HttpResponse
+from django.shortcuts import render
 
 from .forms import ContactForm
 
@@ -16,6 +16,16 @@ def index(request):
 
 def inner_page(request):
     return render(request, 'website/inner-page.html', {})
+
+
+def privacy(request):
+    context = {}
+    return render(request, 'website/privacy-policy.html', context)
+
+
+def disclaimer(request):
+    context = {}
+    return render(request, 'website/disclaimer.html', context)
 
 
 def contact(request):

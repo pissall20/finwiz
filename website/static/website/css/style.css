@@ -148,7 +148,7 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
 }
 .get-started-btn:hover {
-  background: #00b371;
+  background: #5ca0ff;
   color: #fff;
 }
 @media (max-width: 992px) {
@@ -673,7 +673,7 @@ section {
   border-radius: 50px;
 }
 .cta .cta-btn:hover {
-  background: #00b371;
+  background: #5ca0ff;
 }
 @media (max-width: 1024px) {
   .cta {
@@ -1207,7 +1207,7 @@ section {
   border-radius: 50px;
 }
 .contact .php-email-form button[type=submit]:hover {
-  background: #00b371;
+  background: #5ca0ff;
 }
 @-webkit-keyframes animate-loading {
   0% {
@@ -1305,7 +1305,7 @@ section {
   transition: 0.3s;
 }
 #footer .social-links a:hover {
-  background: #00b371;
+  background: #5ca0ff;
   color: #fff;
   text-decoration: none;
 }
@@ -1316,7 +1316,7 @@ section {
   font-size: 13px;
 }
 #footer .credits a {
-  color: #00b371;
+  color: #5ca0ff;
   transition: 0.3s;
 }
 #footer .credits a:hover {

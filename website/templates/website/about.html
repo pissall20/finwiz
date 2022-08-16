@@ -1,0 +1,59 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block title %}Legal Disclaimer{% endblock title %}
+
+{% block content %}
+
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+
+            <ol>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li>About</li>
+            </ol>
+            <br>
+            <h4>About FinWiz</h4>
+
+        </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section class="inner-page">
+        <div class="container">
+
+            <p>In today’s tech savvy world, everybody has access to the financial investments market. However not
+                everybody receives the returns they deserve and unfortunately some even incur losses. This is where we
+                step in to the rescue! We analyse your financials such as income, inbound and outbound cashflows, prior
+                investments, future expenses and create a personalized financial plan to meet your short-term and
+                long-term goals since each investor’s profile is unique and it should be done at a personally customized
+                level via consultation sessions. We deal in all kinds of financial instruments. Apart from this we also
+                provide insurance services to decrease your risk against your assets in case of any unfortunate
+                circumstances. Risk Management plays a vital role in any person’s life. </p>
+
+            <p>We also provide loans and loan planning/consultation, tax filing services wherein we not only file your
+                tax, our company C.A analyses your financial statements and creates a plan where we can avoid maximum
+                tax for your benefit; rest assured tax avoidance is legal unlike tax evasion which is illegal.
+                We also specialise in Career/ Business Consultation and have increased profits by 30% and even up to 60%
+                for our clients, Retirement Planning, Asset Allocation, Overseas Investments and Will Planning. We
+                provide training in fundamental and technical analysis for trading Equity and Equity Futures and Options
+                for those looking to build a career in the Financial Industry.</p>
+        </div>
+    </section>
+
+</main><!-- End #main -->
+
+<script type='text/javascript'>
+
+  $(document).ready(function(){
+    $("#header").addClass("header-inner-pages");
+})
+
+
+
+
+
+</script>
+
+{% endblock content %}

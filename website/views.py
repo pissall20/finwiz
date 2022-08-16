@@ -28,6 +28,12 @@ def disclaimer(request):
     return render(request, 'website/disclaimer.html', context)
 
 
+def about(request):
+    context = {}
+    return render(request, 'website/about.html', context)
+
+
+
 def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)

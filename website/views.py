@@ -3,13 +3,17 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 from .forms import ContactForm
+from .models import Team
 
 
 # Create your views here.
 def index(request):
+    team = Team.objects.all().order_by("order")
     contact_form = ContactForm()
+
     context = {
         "contact_form": contact_form,
+        "team": team
     }
     return render(request, 'website/index.html', context)
 

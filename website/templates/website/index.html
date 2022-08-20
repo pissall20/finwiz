@@ -378,79 +378,27 @@
             </div>
 
             <div class="row gy-4">
+                {% for member in team %}
                 <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="member">
                         <div class="member-img">
-                            <img src="{% static 'website/img/team/profile-for-site.jpg' %}" class="img-fluid" alt="">
+<!--                            <img src="{% static 'website/img/team/profile-for-site.jpg' %}" class="img-fluid" alt="">-->
+                            <img src="{{ member.photo.url }}" class="img-fluid" alt="">
                             <div class="social">
-                                <a href=""><i class="bi bi-twitter"></i></a>
-                                <a href=""><i class="bi bi-facebook"></i></a>
-                                <a href=""><i class="bi bi-instagram"></i></a>
-                                <a href=""><i class="bi bi-linkedin"></i></a>
+                                <a href="{{member.twitter}}"><i class="bi bi-twitter"></i></a>
+                                <a href="{{member.facebook}}"><i class="bi bi-facebook"></i></a>
+                                <a href="{{member.instagram}}"><i class="bi bi-instagram"></i></a>
+                                <a href="{{member.linkedin}}"><i class="bi bi-linkedin"></i></a>
                             </div>
                         </div>
                         <div class="member-info">
-                            <h4>Joshua Henriques</h4>
-                            <span>Founder and CEO</span>
-                            <p>Very good person in finance</p>
+                            <h4>{{member.name}}</h4>
+                            <span>{{member.designation}}</span>
+                            <p>{{member.short_desc}}</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="member">
-                        <div class="member-img">
-                            <img src="{% static 'website/img/team/profile-for-site.jpg' %}" class="img-fluid" alt="">
-                            <div class="social">
-                                <a href=""><i class="bi bi-twitter"></i></a>
-                                <a href=""><i class="bi bi-facebook"></i></a>
-                                <a href=""><i class="bi bi-instagram"></i></a>
-                                <a href=""><i class="bi bi-linkedin"></i></a>
-                            </div>
-                        </div>
-                        <div class="member-info">
-                            <h4>Krish Puthran</h4>
-                            <span>Chartered Accountant</span>
-                            <p>CA with lot of experience</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="member">
-                        <div class="member-img">
-                            <img src="{% static 'website/img/team/profile-for-site.jpg' %}" class="img-fluid" alt="">
-                            <div class="social">
-                                <a href=""><i class="bi bi-twitter"></i></a>
-                                <a href=""><i class="bi bi-facebook"></i></a>
-                                <a href=""><i class="bi bi-instagram"></i></a>
-                                <a href=""><i class="bi bi-linkedin"></i></a>
-                            </div>
-                        </div>
-                        <div class="member-info">
-                            <h4>Neetu Henriques</h4>
-                            <span>Treasurer</span>
-                            <p>Handles money for the company</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="member">
-                        <div class="member-img">
-                            <img src="{% static 'website/img/team/profile-for-site.jpg' %}" class="img-fluid" alt="">
-                            <div class="social">
-                                <a href=""><i class="bi bi-twitter"></i></a>
-                                <a href=""><i class="bi bi-facebook"></i></a>
-                                <a href=""><i class="bi bi-instagram"></i></a>
-                                <a href=""><i class="bi bi-linkedin"></i></a>
-                            </div>
-                        </div>
-                        <div class="member-info">
-                            <h4>Sowmya Puthran</h4>
-                            <span>Lawyer</span>
-                            <p>Lawyer in Finance (in-house)</p>
-                        </div>
-                    </div>
-                </div>
-
+                {% endfor %}
 
             </div>
 

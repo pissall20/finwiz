@@ -965,14 +965,14 @@ section {
 }
 .team .member .social a {
   transition: color 0.3s;
-  color: rgb(0, 153, 97, 0.5);
+  color: rgb(22, 111, 229, 0.5);
   margin: 15px 12px;
   display: block;
   line-height: 0;
   text-align: center;
 }
 .team .member .social a:hover {
-  color: rgb(0, 153, 97, 0.8);
+  color: rgb(22, 111, 229, 0.8);
 }
 .team .member .social i {
   font-size: 18px;

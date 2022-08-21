@@ -17,7 +17,7 @@ class Service(models.Model):
     heading_text = models.CharField(max_length=200)
     description_text = models.TextField(max_length=2000)
     order = models.IntegerField(null=True)
-    icon = models.CharField(max_length=20, default="bx bx-file")
+    icon = models.CharField(max_length=30, default="bx bx-file")
 
     def __str__(self):
         return self.heading_text

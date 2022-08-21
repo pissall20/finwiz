@@ -89,53 +89,15 @@
             </div>
 
             <div class="row">
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                    <div class="icon-box">
-                        <div class="icon"><i class="bx bxl-dribbble"></i></div>
-                        <h4><a href="">Lorem Ipsum</a></h4>
-                        <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-                    <div class="icon-box">
-                        <div class="icon"><i class="bx bx-file"></i></div>
-                        <h4><a href="">Sed ut perspiciatis</a></h4>
-                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-                    <div class="icon-box">
-                        <div class="icon"><i class="bx bx-tachometer"></i></div>
-                        <h4><a href="">Magni Dolores</a></h4>
-                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-                    </div>
-                </div>
-
+                {% for service in services %}
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
                     <div class="icon-box">
-                        <div class="icon"><i class="bx bx-world"></i></div>
-                        <h4><a href="">Nemo Enim</a></h4>
-                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+                        <div class="icon"><i class="{{service.icon}}"></i></div>
+                        <h4><a href="">{{service.heading_text}}</a></h4>
+                        <p>{{service.description_text}}</p>
                     </div>
                 </div>
-
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                    <div class="icon-box">
-                        <div class="icon"><i class="bx bx-slideshow"></i></div>
-                        <h4><a href="">Dele cardo</a></h4>
-                        <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                    <div class="icon-box">
-                        <div class="icon"><i class="bx bx-arch"></i></div>
-                        <h4><a href="">Divera don</a></h4>
-                        <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
-                    </div>
-                </div>
+                {% endfor %}
 
             </div>
 
@@ -189,7 +151,7 @@
                     </div>
                 </div>
                 <div class="image col-lg-6 order-1 order-lg-2"
-                     style='background-image: url({% static "website/img/features.jpg" %});'></div>
+                     style='background-image: url({% static "website/img/features-1.jpeg" %});'></div>
 
             </div>
 
@@ -313,48 +275,19 @@
 
                     <div class="accordion-list">
                         <ul>
+                            {%for faq in faqs %}
                             <li>
-                                <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1">Non
-                                    consectetur a erat nam at lectus urna duis? <i
+                                <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-{{ faq.id }}">
+                                    {{ faq.question }}<i
                                             class="bx bx-chevron-down icon-show"></i><i
                                             class="bx bx-chevron-up icon-close"></i></a>
-                                <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
+                                <div id="accordion-list-{{ faq.id }}" class="collapse" data-bs-parent=".accordion-list">
                                     <p>
-                                        Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus
-                                        laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor
-                                        rhoncus dolor purus non.
+                                        {{ faq.answer }}
                                     </p>
                                 </div>
                             </li>
-
-                            <li>
-                                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed">Feugiat
-                                    scelerisque varius morbi enim nunc? <i class="bx bx-chevron-down icon-show"></i><i
-                                            class="bx bx-chevron-up icon-close"></i></a>
-                                <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
-                                    <p>
-                                        Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id
-                                        interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus
-                                        scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim.
-                                        Mauris ultrices eros in cursus turpis massa tincidunt dui.
-                                    </p>
-                                </div>
-                            </li>
-
-                            <li>
-                                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed">Dolor
-                                    sit amet consectetur adipiscing elit? <i class="bx bx-chevron-down icon-show"></i><i
-                                            class="bx bx-chevron-up icon-close"></i></a>
-                                <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
-                                    <p>
-                                        Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci.
-                                        Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl
-                                        suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis
-                                        convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
-                                    </p>
-                                </div>
-                            </li>
-
+                            {% endfor %}
                         </ul>
                     </div>
 

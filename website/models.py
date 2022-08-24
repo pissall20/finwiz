@@ -61,7 +61,7 @@ class Team(models.Model):
     name = models.CharField(max_length=100)
     designation = models.CharField(max_length=100)
     short_desc = models.TextField(max_length=500)
-    photo = models.ImageField(upload_to="team_pictures/", null=True)
+    photo = models.ImageField(upload_to="team_pictures/", null=True, blank=True)
     order = models.IntegerField(null=True)
 
     # social media

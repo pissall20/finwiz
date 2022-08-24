@@ -116,7 +116,7 @@
                         with us!</p>
                 </div>
                 <div class="col-lg-3 cta-btn-container text-center">
-                    <a class="cta-btn align-middle" href="#contact">Contact Us!</a>
+                    <a class="cta-btn align-middle" href="#contact_form">Contact Us!</a>
                 </div>
             </div>
 
@@ -223,7 +223,7 @@
 
             <div class="text-center title">
                 <h3>What we have achieved so far</h3>
-                <p>Iusto et labore modi qui sapiente xpedita tempora et aut non ipsum consequatur illo.</p>
+                <p>Here is an overview of our business performance statistics.</p>
             </div>
 
             <div class="row counters position-relative">
@@ -268,8 +268,8 @@
                     <div class="content">
                         <h3>Frequently Asked <strong>Questions</strong></h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
+                            Being a new or a seasoned investor, everybody has their doubts. Here are the most frequent
+                            questions most people are concerned about.
                         </p>
                     </div>
 
@@ -279,9 +279,10 @@
                             <li>
                                 <a data-bs-toggle="collapse" class="collapse"
                                    data-bs-target="#accordion-list-{{ faq.id }}">
-                                    {{ faq.question }}<i
-                                        class="bx bx-chevron-down icon-show"></i><i
-                                        class="bx bx-chevron-up icon-close"></i></a>
+                                    {{ faq.question }}
+                                    <i class="bx bx-chevron-down icon-show"></i>
+                                    <i class="bx bx-chevron-up icon-close"></i>
+                                </a>
                                 <div id="accordion-list-{{ faq.id }}" class="collapse" data-bs-parent=".accordion-list">
                                     <p>
                                         {{ faq.answer }}
@@ -307,8 +308,9 @@
         <div class="container">
 
             <div class="section-title">
-                <h2>Our hardworking team</h2>
-                <p>Our hardworking team is great in finance and has professionals.</p>
+                <h2>Meet the team</h2>
+                <p>We are aware that investing can occasionally be complicated and challenging. So, to make your life
+                    easier, our incredibly diligent and committed team is here. Here is our outstanding team.</p>
             </div>
 
             <div class="row gy-4">
@@ -316,7 +318,7 @@
                 <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="member">
                         <div class="member-img">
-                            <!--                            <img src="{% static 'website/img/team/profile-for-site.jpg' %}" class="img-fluid" alt="">-->
+<!--                                                        <img src="{% static 'website/img/team/profile-for-site.jpg' %}" class="img-fluid" alt="">-->
                             <img src="{{ member.photo.url }}" class="img-fluid" alt="">
                             <div class="social">
                                 <a href="{{member.twitter}}"><i class="bi bi-twitter"></i></a>
@@ -346,9 +348,9 @@
 
             <div class="section-title">
                 <h2>Contact</h2>
-                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-                    consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-                    fugiat sit in iste officiis commodi quidem hic quas.</p>
+                <p>There's a lot of confusion around where to invest, how much to invest, what returns to expect.
+                    Contact us to get out of that bubble of confusion and get one step closer to financial freedom with
+                    us!</p>
             </div>
         </div>
 
@@ -389,7 +391,7 @@
 
                 <div class="col-lg-8 mt-5 mt-lg-0">
 
-                    <form action="" method="post" class="php-email-form">
+                    <form action="" method="post" class="php-email-form" id="contact_form">
                         {% csrf_token %}
                         <div class="row gy-4">
                             {{ contact_form.non_field_errors }}
@@ -492,6 +494,8 @@
     });
 
 })
+
+
 
 
 

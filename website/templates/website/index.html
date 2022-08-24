@@ -25,52 +25,56 @@
 
             <div class="section-title">
                 <h2>About Us</h2>
-                <p>In today’s tech savvy world, everybody has access to the financial investments market. However not
-                    everybody receives the returns they deserve and unfortunately some even incur losses. This is where
-                    we
-                    step in to the rescue!</p>
+                <p>At some point in their life, everyone has considered investing in something or somewhere. However,
+                    some people are unsure about where to invest, while others are concerned that they won't make a
+                    profit. What will they do? To whom will they turn? They come to us FinWiz financial solutions, which
+                    is your one-stop solution for all your financial issues.</p>
             </div>
 
             <div class="row content">
                 <div class="col-lg-6">
                     <p>
-                        We analyse your financials such as income, inbound and outbound cashflows, prior
-                        investments, future expenses and create a personalized financial plan to meet your short-term
-                        and
-                        long-term goals since each investor’s profile is unique and it should be done at a personally
-                        customized
-                        level via consultation sessions. We deal in all kinds of financial instruments. Apart from this
-                        we also
-                        provide insurance services to decrease your risk against your assets in case of any unfortunate
-                        circumstances. Risk Management plays a vital role in any person’s life.
+                        Here’s how we help:
                     </p>
                     <ul>
-                        <li><i class="ri-check-double-line"></i> We also provide loans and loan planning/consultation,
-                            tax filing services wherein we not only file your
-                            tax, our company C.A analyses your financial statements and creates a plan where we can
-                            avoid maximum tax for your benefit; rest assured tax avoidance is legal unlike tax evasion
-                            which is illegal.
+                        <li><i class="ri-check-double-line"></i>All forms of financial instruments are what we deal in.
                         </li>
-                        <li><i class="ri-check-double-line"></i> We also specialise in Career/ Business Consultation and
-                            have increased profits by 30% and even up to 60%
-                            for our clients, Retirement Planning, Asset Allocation, Overseas Investments and Will
-                            Planning.
+                        <li><i class="ri-check-double-line"></i>We have personally customised consultation sessions to
+                            create each investors profile.
                         </li>
-                        <li><i class="ri-check-double-line"></i> We
-                            provide training in fundamental and technical analysis for trading Equity and Equity Futures
-                            and Options
-                            for those looking to build a career in the Financial Industry.
+                        <li><i class="ri-check-double-line"></i>We analyse your financials, including income, inbound
+                            and outbound cash flows, prior investments, future expenses, and more, to create a
+                            personalised financial plan to meet your short-term and long-term goals.
                         </li>
+                        <li><i class="ri-check-double-line"></i>We offer insurance services to lessen your risk against
+                            your assets in the event of unfavourable events.
+                        </li>
+                        <li><i class="ri-check-double-line"></i>We do more than filing your taxes; our company's
+                            certified chartered accountant examines your financial statements and develops a strategy to
+                            save you the most money possible on taxes.
+                        </li>
+                        <li><i class="ri-check-double-line"></i>Rest assured that tax avoidance is legal, unlike tax
+                            evasion, which is illegal.
+                        </li>
+                        <li><i class="ri-check-double-line"></i>We also offer loans, loan planning/consulting, and tax
+                            filing services.
+                        </li>
+                        <li><i class="ri-check-double-line"></i>We also specialise in asset allocation, retirement
+                            planning, overseas investments, will planning, and career/business consultation, which has
+                            helped our clients' earnings rise by 30% to even 60%.
+                        </li>
+                        <li><i class="ri-check-double-line"></i>For those wishing to pursue a profession in the
+                            financial industry, we offer instruction in fundamental and technical analysis for trading
+                            equity, equity futures, and equity options.
+                        </li>
+
                     </ul>
                 </div>
                 <div class="col-lg-6 pt-4 pt-lg-0">
                     <p>
-                        We deal in all kinds of financial instruments. Apart from this
-                        we also
-                        provide insurance services to decrease your risk against your assets in case of any unfortunate
-                        circumstances. Risk Management plays a vital role in any person’s life. Apart from this we also
-                        provide insurance services to decrease your risk against your assets in case of any unfortunate
-                        circumstances. Risk Management plays a vital role in any person’s life.
+                        We are aware of your hard work to earn money. We promise to assist you in getting the profitable
+                        returns you deserve. So, believe us. We are aware that knowing who we are will help you to trust
+                        us. So, this is our story.
                     </p>
                     <a href="{% url 'about' %}" class="btn-learn-more">Learn More</a>
                 </div>
@@ -318,8 +322,10 @@
                 <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="member">
                         <div class="member-img">
-<!--                                                        <img src="{% static 'website/img/team/profile-for-site.jpg' %}" class="img-fluid" alt="">-->
+                            <!--                                                        <img src="{% static 'website/img/team/profile-for-site.jpg' %}" class="img-fluid" alt="">-->
+                            {% if member.photo %}
                             <img src="{{ member.photo.url }}" class="img-fluid" alt="">
+                            {% endif %}
                             <div class="social">
                                 <a href="{{member.twitter}}"><i class="bi bi-twitter"></i></a>
                                 <a href="{{member.facebook}}"><i class="bi bi-facebook"></i></a>
@@ -494,6 +500,8 @@
     });
 
 })
+
+
 
 
 

@@ -4,6 +4,7 @@ from django.shortcuts import render
 
 from .forms import ContactForm
 from .models import Team, Service, FAQ
+from finwiz.settings import EMAIL_HOST_USER
 
 
 # Create your views here.
@@ -54,15 +55,17 @@ def contact(request):
                 'email': form.cleaned_data['email'],
                 'message': form.cleaned_data['message'],
             }
-            message = "\n".join(body.values())
             form.save()
 
+            email_header = "A new client is trying to contact you:"
+            message = "\n".join([email_header] + [f"{key}: {value}" for key, value in body.items()])
+            response = "Your message has been sent. Thank you!"
+
             try:
-                send_mail(subject, message, 'admin@example.com', ['admin@example.com'])
+                send_mail(subject, message, body.get('email'), [EMAIL_HOST_USER])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
-            # return HttpResponse("Your query has been sent.", status=200)
             return HttpResponse("Message sent successfully", status=200)
 
     form = ContactForm()
-    return render(request, 'aiprizm/index.html', {'form': form})
+    return render(request, 'website/index.html', {'form': form})

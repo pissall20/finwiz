@@ -137,3 +137,4 @@ dmypy.json
 # Personal
 staticfiles
 .DS_Store
+website/migrations

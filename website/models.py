@@ -26,7 +26,7 @@ class Service(models.Model):
 class Client(models.Model):
     name = models.CharField(max_length=100)
     logo = models.ImageField(upload_to="client_logos/", blank=True, null=True)
-    order = models.IntegerField(null=True)
+    order = models.IntegerField(null=True, blank=True)
 
     def __str__(self):
         return self.name

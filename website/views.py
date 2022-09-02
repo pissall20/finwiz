@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 from .forms import ContactForm
-from .models import Team, Service, FAQ
+from .models import Team, Service, FAQ, Client
 from finwiz.settings import EMAIL_HOST_USER
 
 
@@ -12,6 +12,7 @@ def index(request):
     team = Team.objects.all().order_by("order")
     services = Service.objects.all().order_by("order")
     faq = FAQ.objects.all().order_by("order")
+    clients = Client.objects.all().order_by("order")
     contact_form = ContactForm()
 
     context = {

@@ -19,7 +19,8 @@ def index(request):
         "contact_form": contact_form,
         "team": team,
         "services": services,
-        "faqs": faq
+        "faqs": faq,
+        "clients": clients,
     }
     return render(request, 'website/index.html', context)
 

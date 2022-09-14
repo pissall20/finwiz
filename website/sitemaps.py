@@ -1,7 +1,8 @@
 from django.contrib.sitemaps import Sitemap
 from django.shortcuts import reverse
 
-class Static_Sitemap(Sitemap):
+
+class StaticSitemap(Sitemap):
 
     priority = 1.0
     changefreq = 'yearly'
